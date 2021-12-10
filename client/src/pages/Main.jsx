@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { API_URL } from '../config'
 import '../../src/styles/App.css'
 import union from '../images/Union.png'
 import success from '../images/ic_success.png'
