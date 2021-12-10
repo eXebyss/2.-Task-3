@@ -1,0 +1,1 @@
+export const API_URL = 'https://magebit-task3.herokuapp.com/'

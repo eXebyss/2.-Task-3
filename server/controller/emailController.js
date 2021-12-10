@@ -66,6 +66,7 @@ class EmailController {
 			if (err) {
 				console.error(err)
 			}
+			console.log(result)
 			res.status(200).json({ message: `${id} has been deleted` })
 		})
 	}

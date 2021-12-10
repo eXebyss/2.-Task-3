@@ -1,5 +1,6 @@
 import React, { useMemo, useEffect, useState } from 'react'
 import axios from 'axios'
+import { API_URL } from '../config'
 import DataFilter from '../components/UI/DataFilter'
 import MailList from '../components/UI/MailList'
 import Input from '../components/UI/input/Input'
@@ -30,7 +31,7 @@ function Emails() {
 	const getMails = async () => {
 		try {
 			setEmailLoading(true)
-			const url = 'http://localhost:5000/api/get'
+			const url = `${API_URL}api/get`
 			setTimeout(async () => {
 				const response = await axios.get(url)
 				setEmailLoading(false)
@@ -46,7 +47,7 @@ function Emails() {
 	const getMailsLimit = async () => {
 		try {
 			setEmailLoading(true)
-			const url = 'http://localhost:5000/api/get'
+			const url = `${API_URL}api/get`
 			setTimeout(async () => {
 				const response = await axios.get(url, {
 					params: {
@@ -63,7 +64,7 @@ function Emails() {
 	}
 
 	const deleteMail = id => {
-		axios.delete(`http://localhost:5000/api/delete/${id}`)
+		axios.delete(`${API_URL}api/delete/${id}`)
 	}
 
 	const refreshTheList = () => {
@@ -77,7 +78,7 @@ function Emails() {
 	const createSubscriber = async e => {
 		e.preventDefault()
 		try {
-			await axios.post(`http://localhost:5000/api/post`, {
+			await axios.post(`${API_URL}api/post`, {
 				email: email,
 				date: new Date(Date.now()),
 			})

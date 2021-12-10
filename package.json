@@ -1,24 +1,30 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/server.js",
-    "dev": "nodemon server/server.js",
-    "build": "cd client && npm install && npm run build"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "config": "^3.3.6",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "mysql": "^2.18.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
-  }
+	"name": "server",
+	"version": "1.0.0",
+	"description": "This is Client-Server-App",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server/server.js",
+		"dev": "nodemon server/server.js",
+		"build": "cd client && npm install && npm run build"
+	},
+	"keywords": [
+		"React",
+		"React-Router",
+		"SCSS",
+		"Node.js",
+		"Express.js"
+	],
+	"author": "Mihails Fjodorovs",
+	"license": "MIT",
+	"dependencies": {
+		"config": "^3.3.6",
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"mysql": "^2.18.1"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.15"
+	}
 }

@@ -53,9 +53,8 @@ function Main() {
 	}
 
 	const createSubscriber = async e => {
-		e.preventDefault()
-		// console.log({email:email}, typeof {email:email})
-		await axios.post(`http://localhost:5000/api/post`, {
+		e.preventDefault()		
+		await axios.post(`${API_URL}api/post`, {
 			email: email,
 			date: new Date(Date.now()),
 		})
