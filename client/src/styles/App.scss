@@ -1,0 +1,599 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial;
+}
+
+.grid-container {
+	max-width: 1920px;
+	height: 1080px;
+	// max-height: 1080px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 35.4167% 64.5833%;
+	grid-template-rows: 100%;
+
+	// img {
+	// 	max-width: 100%;
+	// 	height: 100%;
+	// }
+}
+
+@media only screen and (max-width: 376px), screen and (max-width: 1000px) {
+	.grid-container {
+		// max-width: 375px;
+		// max-height: 746px;
+		max-width: 100%;
+		max-height: 100%;
+		margin: auto;
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 100%;
+		grid-template-areas: 'area1';
+	}
+}
+
+.grid-item-1 {
+	background: linear-gradient(180deg, #ffffff 0%, #f2f5fa 100%);
+	z-index: 0;
+
+	header {
+		margin-top: 14.7059%;
+		margin-left: 14.7059%;
+		// margin-top: 100px;
+		// margin-left: 100px;
+
+		.top-bar {
+			display: flex;
+			align-items: center;
+
+			h3 {
+				color: #131821;
+				margin: 0px;
+				font-size: 16px;
+				margin-left: 2.2059%;
+				margin-right: 12.2059%;
+				margin-top: 1.7647%;
+				// margin-left: 15px;
+				// margin-right: 83px;
+				// margin-top: 12px;
+			}
+
+			ul,
+			li {
+				margin: 0px;
+				padding: 0px;
+			}
+
+			ul {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				list-style-type: none;
+				// padding-top: 1.7647%;
+				// margin-top: 1.7647%;
+				margin-top: 2.5%;
+				margin-left: 2.3%;
+				// margin-top: 12px;
+
+				a {
+					font-family: Arial;
+					font-style: normal;
+					font-weight: normal;
+					font-size: 16px;
+					line-height: 26px;
+					color: #6a707b;
+					text-decoration: none;
+					// padding-left: 4.4118%;
+					// margin-left: 4.4118%;
+					margin-left: 30px;
+				}
+
+				a:visited {
+					color: #233759;
+				}
+
+				a:hover {
+					color: #4066a5;
+				}
+
+				a:active {
+					color: #233759;
+				}
+			}
+		}
+	}
+
+	section {
+		.success {
+			margin-top: 19.5588%;
+			margin-left: 20.5882%;
+		}
+
+		.heading {
+			// margin-top: 234px;
+			// margin-left: 140px;
+			margin-top: 34.4118%;
+			margin-left: 20.5882%;
+			// width: 399px;
+			// height: 44px;
+
+			h1 {
+				font-family: Georgia;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 32px;
+				line-height: 44px;
+				color: #131821;
+				margin: 0px;
+			}
+		}
+
+		.subheading {
+			// margin-top: 15px;
+			// margin-left: 140px;
+			margin-top: 2.2059%;
+			margin-left: 20.5882%;
+			margin-right: 20.5882%;
+
+			h2 {
+				// width: 400px;
+				// height: 56px;
+
+				font-family: Arial;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 16px;
+				line-height: 28px;
+				color: #6a707b;
+				margin: 0px;
+			}
+		}
+
+		.input {
+			// display: flex;
+			// margin-top: 50px;
+			// margin-left: 100px;
+			margin-top: 7.3529%;
+			margin-left: 14.7059%;
+
+			input {
+				height: 70px;
+				width: 100%;
+				// width: 580px;
+				font-family: Arial;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 16px;
+				line-height: 24px;
+				color: #6a707b;
+				z-index: 0;
+				background: #ffffff;
+				border: 1px solid #e3e3e4;
+				border-left: 4px solid #4066a5;
+				border-right: 0px;
+				margin: 0px;
+				padding: 0px;
+				padding-left: 40px;
+			}
+
+			input:hover {
+				box-shadow: 0px 20px 10px #e2e3e4;
+
+				+ button {
+					.fa {
+						color: #4066a5;
+						opacity: 1;
+					}
+				}
+			}
+
+			textarea:focus,
+			input:focus {
+				outline: none;
+			}
+
+			input:focus {
+				box-shadow: 0px 20px 10px #e2e3e4;
+				border: 1px solid #4066a5;
+				border-left: 4px solid #4066a5;
+				border-right: 0px;
+				box-sizing: border-box;
+				color: #131821;
+				padding-left: 44px;
+
+				+ button {
+					border: 1px solid #4066a5;
+					border-left: 0px;
+					box-sizing: border-box;
+				}
+			}
+
+			button {
+				padding: 0px;
+				width: 83px;
+				height: 70px;
+				font-family: Arial;
+				font-style: normal;
+				font-weight: normal;
+				z-index: 0;
+				background: #ffffff;
+				border: 1px solid #e3e3e4;
+				border-left: 0px;
+				position: relative;
+				left: 100%;
+				top: -70px;
+
+				.fa {
+					font-size: 25px;
+					text-align: center;
+					text-decoration: none;
+					box-sizing: border-box;
+					color: black;
+					opacity: 0.3;
+					padding-right: 20px;
+				}
+
+				.fa:hover {
+					color: #4066a5;
+					opacity: 1;
+				}
+			}
+		}
+
+		.tos {
+			// width: 400px;
+			// height: 28px;
+			// margin-top: 53px;
+			// margin-left: 140px;
+			margin-top: -2.5%;
+			margin-left: 20.5882%;
+			font-family: Arial;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 28px;
+			color: #6a707b;
+
+			/* Customize the label (the container) */
+			.container {
+				display: block;
+				position: relative;
+				padding-left: 40px;
+				margin-bottom: 12px;
+				cursor: pointer;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				margin: 0px;
+			}
+
+			/* Hide the browser's default checkbox */
+			.container input {
+				position: absolute;
+				opacity: 0;
+				cursor: pointer;
+				height: 0;
+				width: 0;
+			}
+
+			/* Create a custom checkbox */
+			.checkmark {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 26px;
+				width: 26px;
+				border-radius: 3px;
+				background-color: #eee;
+			}
+
+			/* On mouse-over, add a grey background color */
+			.container:hover input ~ .checkmark {
+				background-color: #ccc;
+			}
+
+			/* When the checkbox is checked, add a blue background */
+			.container input:checked ~ .checkmark {
+				background-color: #4066a5;
+			}
+
+			/* Create the checkmark/indicator (hidden when not checked) */
+			.checkmark:after {
+				content: '';
+				position: absolute;
+				display: none;
+			}
+
+			/* Show the checkmark when checked */
+			.container input:checked ~ .checkmark:after {
+				display: block;
+			}
+
+			/* Style the checkmark/indicator */
+			.container .checkmark:after {
+				left: 9px;
+				top: 5px;
+				width: 5px;
+				height: 10px;
+				border: solid white;
+				border-radius: 3px;
+				border-width: 0 3px 3px 0;
+				-webkit-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+		}
+
+		a:link {
+			color: #131821;
+		}
+
+		a:visited {
+			color: #233759;
+		}
+
+		a:hover {
+			color: #4066a5;
+		}
+
+		a:active {
+			color: #233759;
+		}
+	}
+}
+
+div.line {
+	// margin-top: 50px;
+	// margin-left: 140px;
+	// width: 400px;
+	margin-top: 7.3529%;
+	margin-left: 20.5882%;
+	width: 58.8235%;
+
+	.horizontal-line {
+		border-top: 1px solid #e3e3e4;
+	}
+}
+
+footer {
+	// margin-top: 50px;
+	// margin-left: 218px;
+	margin-top: 7.3529%;
+	margin-left: 32.0588%;
+	margin-right: 32.0588%;
+	// width: 244px;
+	// height: 46px;
+
+	.social-icons {
+		.fa {
+			padding: 14px;
+			font-size: 16px;
+			width: 46px;
+			height: 46px;
+			text-align: center;
+			text-decoration: none;
+			border-radius: 25px;
+			border: 2px solid #e3e3e4;
+			box-sizing: border-box;
+			color: black;
+			opacity: 0.3;
+		}
+
+		.fa-instagram {
+			margin-left: 15px;
+		}
+
+		.fa-twitter {
+			margin-left: 15px;
+		}
+
+		.fa-youtube-play {
+			margin-left: 15px;
+		}
+
+		.fa:hover {
+			color: #ffffff;
+			opacity: 1;
+			border: 0px solid #e3e3e4;
+			box-shadow: 5px 15px 10px #e2e3e4;
+		}
+
+		.fa:active {
+			color: #ffffff;
+			opacity: 1;
+			border: 0px solid #e3e3e4;
+			box-shadow: 5px 15px 10px #e2e3e4;
+		}
+
+		.fa-facebook:hover {
+			background-color: #4267b2;
+		}
+
+		.fa-facebook:active {
+			background-color: #2f4a80;
+		}
+
+		.fa-instagram:hover {
+			background-color: #c13584;
+		}
+
+		.fa-instagram:active {
+			background-color: #8f2762;
+		}
+
+		.fa-twitter:hover {
+			background-color: #1da1f2;
+		}
+
+		.fa-twitter:active {
+			background-color: #177fbf;
+		}
+
+		.fa-youtube-play:hover {
+			background-color: #ff0000;
+		}
+
+		.fa-youtube-play:active {
+			background-color: #cc0000;
+		}
+	}
+}
+
+@media only screen and (max-width: 376px), screen and (max-width: 1000px) {
+	.grid-item-1 {
+		background: none;
+		grid-area: area1;
+		background-image: url('../images/image_summer.png');
+
+		header {
+			margin: 0;
+			background: linear-gradient(180deg, #ffffff 0%, #f2f5fa 100%);
+
+			.top-bar {
+				height: 66px;
+
+				img {
+					margin-left: 20px;
+					margin-bottom: 1px;
+				}
+
+				h3 {
+					font-size: 0px;
+				}
+				ul {
+					margin: 0px;
+					margin-left: 30px;
+
+					a {
+						font-size: 14px;
+						line-height: 24px;
+						margin-left: 20px;
+					}
+				}
+			}
+		}
+
+		section {
+			// margin-top: 188px;
+			margin-top: 50.1333%;
+			// margin-left: 20px;
+			margin-left: 5.3333%;
+			width: 335px;
+			// width: 89.3333%;
+			height: 270px;
+			// height: 72%;
+			background: linear-gradient(180deg, #ffffff 0%, #f2f5fa 100%);
+
+			.success {
+				margin-left: 6%;
+				padding-top: 9%;
+				margin-bottom: -2%;
+			}
+
+			.heading {
+				margin: 0px;
+				padding-top: 20px;
+				padding-left: 20px;
+
+				h1 {
+					padding-top: 10px;
+					font-size: 24px;
+					line-height: 34px;
+				}
+			}
+
+			.subheading {
+				margin: 0px;
+
+				h2 {
+					font-size: 14px;
+					line-height: 26px;
+					margin: 0px;
+					padding-left: 20px;
+					padding-right: 20px;
+					padding-top: 10px;
+				}
+			}
+
+			.input {
+				margin: 0px;
+				margin-left: 20px;
+				// margin-right: 20px;
+				margin-top: 20px;
+				height: 60px;
+
+				input {
+					height: 60px;
+					width: 255px;
+					font-size: 16px;
+					line-height: 24px;
+					padding-left: 15px;
+				}
+
+				button {
+					height: 60px;
+					width: 40px;
+					left: -4px;
+					top: 1px;
+
+					.fa {
+						padding-right: 10px;
+						padding-bottom: 5px;
+					}
+				}
+			}
+
+			.tos {
+				margin: 0px;
+				margin-top: 20px;
+				margin-left: 20px;
+				margin-right: 20px;
+				font-size: 16px;
+				line-height: 28px;
+				color: #6a707b;
+			}
+		}
+		div.line {
+			margin-top: 20px;
+			margin-left: 20px;
+			width: 295px;
+		}
+
+		footer {
+			margin: 0px;
+			// margin-left: 20px;
+			margin-left: 5.3333%;
+			margin-right: 20px;
+			width: 335px;
+			// width: 89.3333%;
+			height: 101px;
+			background-color: #f2f5fa;
+
+			.social-icons {
+				margin: 0px;
+				padding-left: 50px;
+				padding-top: 18px;
+
+				.fa {
+					margin: 0px;
+					padding: 0px;
+					padding-top: 14px;
+					margin-top: 6px;
+					margin-left: 5px;
+					margin-right: 0px;
+				}
+			}
+		}
+	}
+}
+
+.grid-item-2 {
+	z-index: -1;
+	background-image: url('../images/image_summer.png');
+}
