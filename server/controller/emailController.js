@@ -1,3 +1,6 @@
+const fs = require('fs')
+const path = require('path')
+const Json2csvParser = require('json2csv').Parser
 const db = require('../db/db')
 
 class EmailController {
@@ -68,6 +71,46 @@ class EmailController {
 			}
 			console.log(result)
 			res.status(200).json({ message: `${id} has been deleted` })
+		})
+	}
+
+	getCSV = (req, res) => {
+		const sqlSelect = 'SELECT * FROM Emails'
+
+		db.query(sqlSelect, (err, result) => {
+			if (err) throw err
+			// console.log('emails:')
+
+			const jsonEmails = JSON.parse(JSON.stringify(result))
+			// console.log(jsonEmails)
+
+			const csvFields = ['id', 'email', 'date']
+			const json2csvParser = new Json2csvParser({ csvFields })
+			const csv = json2csvParser.parse(jsonEmails)
+
+			// console.log(csv);
+
+			fs.writeFile('emails.csv', csv, function (err) {
+				if (err) throw err
+				console.log('File saved.')
+			})
+
+			const options = {
+				root: path.join('./'),
+				headers: {
+					'x-timestamp': Date.now(),
+					'x-sent': true,
+				},
+			}
+
+			const fileName = 'emails.csv'
+			res.status(200).sendFile(fileName, options, function (err) {
+				if (err) {
+					console.log(err)
+				} else {
+					console.log('Sent:', fileName)
+				}
+			})
 		})
 	}
 }

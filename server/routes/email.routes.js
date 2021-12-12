@@ -9,4 +9,6 @@ router.post('/post', emailController.createNewEmail)
 
 router.delete('/delete/:id', emailController.deleteAnEmail )
 
+router.get('/export-csv', emailController.getCSV)
+
 module.exports = router

@@ -93,6 +93,15 @@ function Emails() {
 		setEmail('')
 	}
 
+	const exportToCSV = async e => {
+		e.preventDefault()
+		try {
+			await axios.get(`${API_URL}api/export-csv`)
+		} catch (err) {
+			console.log(`${err.response.data.message}.`, 'Error 3: export-csv')
+		}
+	}
+
 	const sortedData = useMemo(() => {
 		// console.log('Worked: sortedData.')
 		if (filter.sort) {
@@ -153,6 +162,8 @@ function Emails() {
 				setFilter={setFilter}
 				options={getUniqueDomainNames(emailList)}
 			/>
+			<br />
+			<Button onClick={e => exportToCSV(e)}>Export CSV</Button>
 			{isEmailLoading ? (
 				<div
 					style={{
