@@ -1,5 +1,6 @@
 import React, { useMemo, useEffect, useState } from 'react'
 import axios from 'axios'
+import fileDownload from 'js-file-download'
 import { API_URL } from '../config'
 import DataFilter from '../components/UI/DataFilter'
 import MailList from '../components/UI/MailList'
@@ -96,7 +97,13 @@ function Emails() {
 	const exportToCSV = async e => {
 		e.preventDefault()
 		try {
-			await axios.get(`${API_URL}api/export-csv`)
+			axios
+				.get(`${API_URL}api/export-csv`, {
+					responseType: 'blob',
+				})
+				.then(res => {
+					fileDownload(res.data, 'emails.csv')
+				})
 		} catch (err) {
 			console.log(`${err.response.data.message}.`, 'Error 3: export-csv')
 		}
