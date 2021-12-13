@@ -1,7 +1,7 @@
 import React, { useMemo, useEffect, useState } from 'react'
 import axios from 'axios'
 import fileDownload from 'js-file-download'
-import { API_URL } from '../config'
+import { API_URL, API_URL2 } from '../config'
 import DataFilter from '../components/UI/DataFilter'
 import MailList from '../components/UI/MailList'
 import Input from '../components/UI/input/Input'
@@ -98,7 +98,7 @@ function Emails() {
 		e.preventDefault()
 		try {
 			axios
-				.get(`${API_URL}api/export-csv`, {
+				.get(`${API_URL2}api/export-csv`, {
 					responseType: 'blob',
 				})
 				.then(res => {

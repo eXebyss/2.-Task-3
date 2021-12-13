@@ -7,7 +7,8 @@
 -**ReactJS** to render components and their content on the client side.\
 -**React-Router** to switch between pages.\
 -**Node.js** and **Express.js** is responsible for running the server for BE logic like handling incoming *http* request and validate data on BE if it is necessary.\
--Deployed on **Heroku**.
+-Deployed on **Heroku**.\
+-Due to ephemeral file system on **Heroku**, "Export CSV" feature is working only running the **Node.js** server on localhost. Get request on *Client* side is fetching data from: 'http://localhost:5000/' . It can be easily changed in './client/src/config.js': API_URL2.
 
 ## 0. To install the app on your localhost:
 
